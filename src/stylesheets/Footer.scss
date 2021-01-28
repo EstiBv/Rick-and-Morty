@@ -1,0 +1,13 @@
+.footer {
+  text-align: center;
+  position: fixed;
+  background-color: hsl(215, 81%, 19%);
+  bottom: 0;
+  height: 30px;
+  width: 100vw;
+  font-family: misfits;
+  &__copy {
+    margin-bottom: 30px;
+    color: hsl(215, 75%, 46%);
+  }
+}

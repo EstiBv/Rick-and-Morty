@@ -1,0 +1,111 @@
+@font-face {
+  font-family: misfits;
+  src: url(../fonts/MISFITS_.TTF);
+}
+.link-card {
+  text-decoration: none;
+  font-family: misfits;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  &__title {
+    color: hsl(187, 36%, 95%);
+    text-align: center;
+    letter-spacing: 1.5px;
+    font-family: misfits;
+    font-size: 24px;
+  }
+  &__type {
+    color: hsl(215, 75%, 46%);
+    font-weight: 600;
+    text-align: center;
+    font-size: 18px;
+    font-family: misfits;
+  }
+  &__img {
+    width: 80px;
+    border-radius: 50px;
+    border-width: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 40px hsl(215, 75%, 46%);
+  }
+  &__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 10px;
+    padding-bottom: 50px;
+    font-family: misfits;
+  }
+  &__img:hover {
+    box-shadow: 0px 0px 40px hsl(29, 84%, 52%);
+    transition: ease 1s;
+    transform: scale(1.2);
+  }
+}
+
+// @media
+@media all and (min-width: 768px) {
+  .container {
+    &__title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &--img {
+        height: auto;
+        width: 150px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .container__title--img {
+    height: auto;
+    width: 350px;
+  }
+  .card__img {
+    width: 90px;
+  }
+  .title {
+    justify-content: center;
+  }
+  .card__list {
+    margin-top: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 30px;
+  }
+  .form__filter {
+    font-size: 14px;
+    align-items: flex-end;
+  }
+  .form__input {
+    height: 25px;
+    width: 150px;
+  }
+  &__img:hover {
+    transform: scale(1.7);
+  }
+}
+@media all and (min-width: 1024px) {
+  .container__title--img {
+    height: auto;
+    width: 450px;
+  }
+  .card__list {
+    color: hsl(182, 69%, 46%);
+    grid-row-gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  &__img:hover {
+    transform: scale(1.9);
+  }
+}
